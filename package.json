@@ -1,0 +1,28 @@
+{
+  "name": "eslint-plugin-no-smart-quotes",
+  "version": "0.0.0",
+  "description": "Prevent the use of curly quote/apostrophe characters",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "quotes",
+    "smart-quotes"
+  ],
+  "author": "Sean S. LeBlanc <sean.s.leblanc@gmail.com>",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "~3.9.1",
+    "mocha": "^3.1.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "MIT"
+}
