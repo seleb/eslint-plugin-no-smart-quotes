@@ -15,7 +15,8 @@
     "test": "mocha tests --recursive"
   },
   "dependencies": {
-    "requireindex": "^1.2.0"
+    "requireindex": "^1.2.0",
+    "string.prototype.matchall": "^4.0.2"
   },
   "devDependencies": {
     "eslint": "^6.8.0",

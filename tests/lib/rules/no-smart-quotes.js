@@ -25,15 +25,17 @@ ruleTester.run("no-smart-quotes", rule, {
     ],
     invalid: [{
         code: "var string = 'It’s a smart apostrophe!';",
+        output: "var string = 'It\\'s a smart apostrophe!';",
         errors: [{
-            message: `Strings must use straight quotes in: 'It’s a smart apostrophe!'. Use ' instead.`,
+            message: `Strings must use straight quotes.`,
             type: "Literal"
         }]
     }, {
         code: "var string = 'They said “here are smart quotes!”';",
+        output: "var string = 'They said \"here are smart quotes!\"';",
         errors: [{
-            message: `Strings must use straight quotes in: 'They said “here are smart quotes!”'. Use " instead.`,
+            message: `Strings must use straight quotes.`,
             type: "Literal"
-        }]
+        }],
     }]
 });
