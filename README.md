@@ -2,6 +2,8 @@
 
 Prevent the use of curly quote/apostrophe characters
 
+**Fixable:** This rule is automatically fixable using the `--fix` flag on the command line.
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):

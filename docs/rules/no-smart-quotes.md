@@ -1,5 +1,7 @@
 # Prevent the use of curly quote/apostrophe characters (no-smart-quotes)
 
+**Fixable:** This rule is automatically fixable using the `--fix` flag on the command line.
+
 ## Rule Details
 
 This rule aims to prevent the use of curly quote/apostrophe characters in order to provide more typographic simplicity/consistency.
