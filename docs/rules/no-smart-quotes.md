@@ -8,16 +8,18 @@ This rule aims to prevent the use of curly quote/apostrophe characters in order 
 
 Examples of **incorrect** code for this rule:
 
-```js
+```jsx
 const a = "It's a straight apostrophe!";
 const b = 'They said "here are straight quotes!"';
+const Component = () => <>“Here’s some quotes!”</>;
 ```
 
 Examples of **correct** code for this rule:
 
-```js
+```jsx
 const a = "It's a straight apostrophe!";
 const b = 'They said "here are straight quotes!"';
+const Component = () => <>"Here's some quotes!"</>;
 ```
 
 ## When Not To Use It
