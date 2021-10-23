@@ -31,6 +31,7 @@ ruleTester.run("no-smart-quotes", rule, {
         `var string = "It's a straight apostrophe!";`,
         `var string = 'They said "here are straight quotes!"';`,
         `<>"Here's some quotes!"</>`,
+        `<div attr="It's a smart apostrophe!" />`,
     ],
     invalid: [{
         code: "var string = 'It’s a smart apostrophe!';",
@@ -52,6 +53,13 @@ ruleTester.run("no-smart-quotes", rule, {
         errors: [{
             message: `Strings must use straight quotes.`,
             type: "JSXText"
+        }],
+    }, {
+        code: `<div attr="It’s a smart apostrophe!" />`,
+        output: `<div attr="It's a smart apostrophe!" />`,
+        errors: [{
+            message: `Strings must use straight quotes.`,
+            type: "Literal"
         }],
     }]
 });
