@@ -63,3 +63,28 @@ ruleTester.run("no-smart-quotes", rule, {
         }],
     }]
 });
+
+const vueTester = new RuleTester({
+    parser: require.resolve('vue-eslint-parser'),
+    parserOptions: { ecmaVersion: 2015 },
+});
+
+vueTester.run('no-smart-quotes', rule, {
+    valid: [
+        {
+            code: `<template>"Here's some quotes!"</template>`,
+        },
+    ],
+    invalid: [
+        {
+            code: `<template>“Here’s some quotes!”</template>`,
+            output: `<template>"Here's some quotes!"</template>`,
+            errors: [
+                {
+                    message: 'Strings must use straight quotes.',
+                    type: 'VText',
+                },
+            ],
+        },
+    ],
+});
