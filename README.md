@@ -8,14 +8,14 @@ Prevent the use of curly quote/apostrophe characters
 
 You'll first need to install [ESLint](http://eslint.org):
 
-```
-$ npm i eslint --save-dev
+```sh
+npm i -D eslint
 ```
 
 Next, install `eslint-plugin-no-smart-quotes`:
 
-```
-$ npm install eslint-plugin-no-smart-quotes --save-dev
+```sh
+npm i -D eslint-plugin-no-smart-quotes
 ```
 
 **Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-no-smart-quotes` globally.
