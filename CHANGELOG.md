@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/seleb/eslint-plugin-no-smart-quotes/compare/v1.4.1...v1.4.2) (2024-10-22)
+
+
+### Bug Fixes
+
+* fix release workflow ([6c3f7fa](https://github.com/seleb/eslint-plugin-no-smart-quotes/commit/6c3f7fa8c3b2f86a26cc6807503f64390beae1b9))
+
 ## [1.4.1](https://github.com/seleb/eslint-plugin-no-smart-quotes/compare/v1.4.0...v1.4.1) (2024-10-22)
 
 

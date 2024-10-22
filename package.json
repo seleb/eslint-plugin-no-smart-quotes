@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-no-smart-quotes",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Prevent the use of curly quote/apostrophe characters",
   "keywords": [
     "eslint",
