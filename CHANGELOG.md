@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/seleb/eslint-plugin-no-smart-quotes/compare/v1.3.0...v1.4.0) (2024-10-22)
+
+
+### Features
+
+* Support template literals ([#20](https://github.com/seleb/eslint-plugin-no-smart-quotes/issues/20)) ([b9167a0](https://github.com/seleb/eslint-plugin-no-smart-quotes/commit/b9167a071910723076bfe3eb23aba380a50ac85c)), closes [#19](https://github.com/seleb/eslint-plugin-no-smart-quotes/issues/19)
+
 # [1.3.0](https://github.com/seleb/eslint-plugin-no-smart-quotes/compare/v1.2.2...v1.3.0) (2021-10-23)
 
 
@@ -41,4 +48,3 @@
 # 1.0.0 (2019-03-30)
 
 * initial release
-
