@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/seleb/eslint-plugin-no-smart-quotes/compare/v2.0.0...v2.0.1) (2026-03-24)
+
+
+### Bug Fixes
+
+* empty patch to test release ([34bbabb](https://github.com/seleb/eslint-plugin-no-smart-quotes/commit/34bbabb15b092ae2b11cb0a9b4c5cbf11f9684ec))
+
 # [2.0.0](https://github.com/seleb/eslint-plugin-no-smart-quotes/compare/v1.4.2...v2.0.0) (2026-03-24)
 
 
