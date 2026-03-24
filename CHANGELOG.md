@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/seleb/eslint-plugin-no-smart-quotes/compare/v1.4.2...v2.0.0) (2026-03-24)
+
+
+### Features
+
+* update for eslint v10 ([3dd4eb9](https://github.com/seleb/eslint-plugin-no-smart-quotes/commit/3dd4eb9fcb2efd849441be3dc48edd88c88e8501))
+
+
+### BREAKING CHANGES
+
+* this updates to use the eslint v10 plugin format, and drops `vue-eslint-parser` as a peer dependency
+
 ## [1.4.2](https://github.com/seleb/eslint-plugin-no-smart-quotes/compare/v1.4.1...v1.4.2) (2024-10-22)
 
 
