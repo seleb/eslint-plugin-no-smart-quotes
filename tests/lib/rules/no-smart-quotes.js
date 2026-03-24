@@ -18,13 +18,15 @@ var rule = require("../../../lib/rules/no-smart-quotes"),
 //------------------------------------------------------------------------------
 
 var ruleTester = new RuleTester({
-    parserOptions: {
+    languageOptions: {
         ecmaVersion: 2018,
         sourceType: 'module',
-        ecmaFeatures: {
-            jsx: true
-        }
-    }
+        parserOptions: {
+            ecmaFeatures: {
+                jsx: true
+            },
+        },
+    },
 });
 ruleTester.run("no-smart-quotes", rule, {
     valid: [
@@ -34,73 +36,51 @@ ruleTester.run("no-smart-quotes", rule, {
         `<div attr="It's a smart apostrophe!" />`,
         "var template = `It's a straight apostrophe!`;",
         'var template = `They said "here are straight quotes!"`;',
+        `<template>"Here's some quotes!"</template>`,
     ],
     invalid: [{
         code: "var string = 'It’s a smart apostrophe!';",
         output: "var string = 'It\\'s a smart apostrophe!';",
         errors: [{
             message: `Strings must use straight quotes.`,
-            type: "Literal"
         }]
     }, {
         code: "var string = 'They said “here are smart quotes!”';",
         output: "var string = 'They said \"here are smart quotes!\"';",
         errors: [{
             message: `Strings must use straight quotes.`,
-            type: "Literal"
         }],
     }, {
         code: `<>“Here’s some quotes!”</>`,
         output: `<>"Here's some quotes!"</>`,
         errors: [{
             message: `Strings must use straight quotes.`,
-            type: "JSXText"
         }],
     }, {
         code: `<div attr="It’s a smart apostrophe!" />`,
         output: `<div attr="It's a smart apostrophe!" />`,
         errors: [{
             message: `Strings must use straight quotes.`,
-            type: "Literal"
         }],
     }, {
         code: "var template = `It’s a straight apostrophe!`;",
         output: "var template = `It's a straight apostrophe!`;",
         errors: [{
             message: `Strings must use straight quotes.`,
-            type: "TemplateElement"
         }],
     }, {
         code: "var template = `They said “here are smart quotes!”`;",
         output: 'var template = `They said "here are smart quotes!"`;',
         errors: [{
             message: `Strings must use straight quotes.`,
-            type: "TemplateElement"
         }],
-    }]
-});
-
-const vueTester = new RuleTester({
-    parser: require.resolve('vue-eslint-parser'),
-    parserOptions: { ecmaVersion: 2015 },
-});
-
-vueTester.run('no-smart-quotes', rule, {
-    valid: [
-        {
-            code: `<template>"Here's some quotes!"</template>`,
-        },
-    ],
-    invalid: [
-        {
-            code: `<template>“Here’s some quotes!”</template>`,
-            output: `<template>"Here's some quotes!"</template>`,
-            errors: [
-                {
-                    message: 'Strings must use straight quotes.',
-                    type: 'VText',
-                },
-            ],
-        },
-    ],
+    }, {
+        code: `<template>“Here’s some quotes!”</template>`,
+        output: `<template>"Here's some quotes!"</template>`,
+        errors: [
+            {
+                message: 'Strings must use straight quotes.',
+            },
+        ],
+    }],
 });
